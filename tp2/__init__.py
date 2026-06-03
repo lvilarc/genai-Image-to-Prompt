@@ -8,6 +8,8 @@ from .config import (
     default_device,
     default_dtype,
 )
+from .aggregate import aggregate_metrics, load_rows, summarize_run, write_summary
+from .io_utils import create_run_dir, save_run, save_target_results, write_csv
 from .metrics import Evaluator, pixel_rmse
 from .ranking import composite_score, rank_candidates, select_top_k
 from .render import (
@@ -30,4 +32,6 @@ __all__ = [
     "list_target_images", "load_image", "safe_stem", "seed_from_filename",
     "Evaluator", "pixel_rmse",
     "composite_score", "rank_candidates", "select_top_k",
+    "create_run_dir", "save_run", "save_target_results", "write_csv",
+    "aggregate_metrics", "load_rows", "summarize_run", "write_summary",
 ]
