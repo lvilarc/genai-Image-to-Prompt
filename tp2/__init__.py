@@ -9,6 +9,7 @@ from .config import (
     default_dtype,
 )
 from .metrics import Evaluator, pixel_rmse
+from .ranking import composite_score, rank_candidates, select_top_k
 from .render import (
     get_pipeline,
     load_pipeline,
@@ -28,4 +29,5 @@ __all__ = [
     "get_pipeline", "load_pipeline", "render_prompt", "render_prompt_for_target",
     "list_target_images", "load_image", "safe_stem", "seed_from_filename",
     "Evaluator", "pixel_rmse",
+    "composite_score", "rank_candidates", "select_top_k",
 ]
