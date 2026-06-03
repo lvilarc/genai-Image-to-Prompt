@@ -8,6 +8,7 @@ from .config import (
     default_device,
     default_dtype,
 )
+from .metrics import Evaluator, pixel_rmse
 from .render import (
     get_pipeline,
     load_pipeline,
@@ -26,4 +27,5 @@ __all__ = [
     "default_device", "default_dtype",
     "get_pipeline", "load_pipeline", "render_prompt", "render_prompt_for_target",
     "list_target_images", "load_image", "safe_stem", "seed_from_filename",
+    "Evaluator", "pixel_rmse",
 ]
