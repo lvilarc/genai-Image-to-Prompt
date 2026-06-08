@@ -69,7 +69,6 @@ git-ignored and **must not be committed**. A free key can be obtained at
 │   ├── io_utils.py             # per-run output writing (CSV/JSON/PNG)
 │   ├── aggregate.py            # mean/std aggregation across targets
 │   └── approaches/
-│       ├── base.py             # trivial baselines (pipeline sanity checks)
 │       └── refine.py           # Gemini seeder + render-guided critic (final method)
 ├── run_final.py                # entry point: full 6-target, 3-seed run
 ├── requirements.txt
