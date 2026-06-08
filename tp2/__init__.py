@@ -9,7 +9,18 @@ from .config import (
     default_dtype,
 )
 from .aggregate import aggregate_metrics, load_rows, summarize_run, write_summary
+from .approaches import (
+    GeminiCritic,
+    constant_prompt,
+    fixed_prompts,
+    refine_approach,
+)
 from .io_utils import create_run_dir, save_run, save_target_results, write_csv
+from .orchestrator import (
+    TargetContext,
+    evaluate_prompts_for_target,
+    run_pipeline,
+)
 from .metrics import Evaluator, pixel_rmse
 from .ranking import composite_score, rank_candidates, select_top_k
 from .render import (
@@ -34,4 +45,7 @@ __all__ = [
     "composite_score", "rank_candidates", "select_top_k",
     "create_run_dir", "save_run", "save_target_results", "write_csv",
     "aggregate_metrics", "load_rows", "summarize_run", "write_summary",
+    "run_pipeline", "TargetContext", "evaluate_prompts_for_target",
+    "constant_prompt", "fixed_prompts",
+    "GeminiCritic", "refine_approach",
 ]

@@ -10,7 +10,7 @@ Cada métrica é convertida para "goodness" (maior = melhor) em [0,1]:
 Pesos por omissão iguais (1/3 cada); são renormalizados, por isso não precisam de somar 1.
 """
 
-DEFAULT_WEIGHTS = {"clip_sim": 1 / 3, "lpips": 1 / 3, "rmse": 1 / 3}
+DEFAULT_WEIGHTS = {"clip_sim": 0.4, "lpips": 0.3, "rmse": 0.3}
 
 
 def _clamp01(x: float) -> float:

@@ -1,4 +1,5 @@
 """Configuração fixa do gerador LCM, dispositivo, dtype e caminhos do projeto."""
+import os
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -47,3 +48,22 @@ PROJECT_DIR = Path(__file__).resolve().parent.parent
 TARGET_DIR = PROJECT_DIR / "tp2-chosen"
 OUTPUT_DIR = PROJECT_DIR / "outputs"
 CACHE_DIR = PROJECT_DIR / ".cache" / "renders"
+
+
+def load_dotenv(path=None) -> None:
+    """Carrega variáveis de um ficheiro .env (KEY=valor) para o ambiente, se existir.
+
+    Variáveis já definidas no ambiente têm prioridade (setdefault). Chamado no import de tp2.
+    """
+    path = Path(path) if path else PROJECT_DIR / ".env"
+    if not path.exists():
+        return
+    for line in path.read_text().splitlines():
+        line = line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, _, val = line.partition("=")
+        os.environ.setdefault(key.strip(), val.strip().strip('"').strip("'"))
+
+
+load_dotenv()
