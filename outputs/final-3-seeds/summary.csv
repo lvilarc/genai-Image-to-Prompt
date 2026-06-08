@@ -1,9 +1,0 @@
-group,metric,mean,std,n
-best_per_target,clip_sim,0.871182,0.043947,6
-best_per_target,lpips,0.603456,0.062367,6
-best_per_target,rmse,0.188935,0.05287,6
-best_per_target,score,0.710755,0.033446,6
-all_candidates,clip_sim,0.860231,0.059984,18
-all_candidates,lpips,0.617623,0.065125,18
-all_candidates,rmse,0.181027,0.043161,18
-all_candidates,score,0.704497,0.030399,18
